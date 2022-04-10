@@ -218,7 +218,7 @@ chiSquare %>% ggplot() +
  
  maka akan didapat histogram seperti gambar dibawah
 
-![4b](https://github.com/bosbonta/P1_Probstat_F_5025201182/blob/main/screenshoot/pic.4.png)
+![4b](https://github.com/bosbonta/P1_Probstat_F_5025201182/blob/main/screenshoot/pic.4a.png)
 
 -**Nilai rata-rata dan variasi**
 
@@ -230,3 +230,4 @@ v=10
 rata=v
 vari=2*v
 ```
+maka untuk nilai rata-ratanya adalah sbesar 10 dan untuk variannya adalah sebesar 20
