@@ -71,8 +71,118 @@ Pada histogram diatas untuk data 3 memiliki probabilitas mendekati 0,1
 Untuk nilai rata-rata dari 10.000 data acak dapat dicari dengan menggunakan “mean”. Sedangkan untuk variannya didapat dengan menggunakan “var”
 
 ``` R
+#1e
 mean(dataNo1)
 var(dataNo1)
 ```
 untuk hasil mean yang didapat adalah sebesar 4.0089
 sedangkan untuk variannya adalah sebesar 19.42616
+
+
+## Soal 2
+>Terdapat 20 pasien menderita Covid19 dengan peluang sembuh sebesar 0.2
+
+-**Peluang terdapat 4 pasien yang sembuh**
+
+Untuk mengerjakan soal ini dapat menggunakan “dbinom”
+``` R
+#2a
+dbinom(4,20,0.2)
+```
+
+maka didapatkan hasilnya adalah 0.2181994
+
+-**Gambarkan grafik histogram**
+
+Pada soal ini menggunakan histogram, dengan syntax seperti di bawah
+
+``` R
+#2b
+data.frame(x = 0:10, prob = dbinom(x = 0:10, 20,prob = .2)) %>%
+  mutate(Failures = ifelse(x == 4, 4, "bukan 4")) %>%
+  ggplot(aes(x = factor(x), y = prob, fill = Failures)) +
+  geom_col() + geom_text(
+    aes(label = round(prob,2), y = prob + 0.01),
+    position = position_dodge(0.9),
+    size = 4,
+    vjust = 0) +
+  labs(title = "Peluang 4 pasien sembuh dari 20 pasien",
+       subtitle = "dengan prob=0.2",
+       x = "Jumlah pasien (x) yang sembuh dari 20 pasien",
+       y = "Peluang") 
+```
+
+Bisa dilihat pada histogram di bawah bahwa, untuk probabilitas 4 pasien sembuh ada di 0.22
+
+![1d](https://github.com/bosbonta/P1_Probstat_F_5025201182/blob/main/screenshoot/pic.2a.png)
+
+-**Nilai rata-rata dan varians distribusi binomial**
+
+Dapat menggunakan rumus dibawah
+
+![1d](https://github.com/bosbonta/P1_Probstat_F_5025201182/blob/main/screenshoot/pic.2b.png)
+``` R
+#2c
+n=20
+p=0.2
+q=0.8
+mu=n*p
+var=n*p*q
+```
+Maka, untuk rata-ratanya adalah 4 dan variansnya adalah 3.2
+
+## Soal 3
+>Diketahui data dari sebuah tempat bersalin di rumah sakit tertentu menunjukkan rata-rata historis
+4,5 bayi lahir di rumah sakit ini setiap hari. (gunakan Distribusi Poisson)
+
+-**Peluang 6 bayi lahir dirumah sakit besok dengan rata-rata historis 4,5 bayi lahir per hari**
+
+Untuk mendapatkan hasil peluang distribusi poison tersebut dapat menggunakan “dpois”
+``` R
+#3a
+dpois(6,4.5)
+```
+
+maka didapat peluang distribusinya adalah sebesar 0.1281201
+
+-**histogram kelahiran 6 bayi akan lahir di rumah sakit ini selama setahun (n = 365)**
+
+data randomnya didapat dengan random menggunakan “rpois” lalu untuk syntax histogramnya seperti dibawah
+``` R
+#3b
+babies <- data.frame('data' = rpois(365, 4.5))
+babies %>% ggplot() +
+  geom_histogram(aes(x = data,
+                     y = stat(count / sum(count)),
+                     fill = data == 6),
+                 binwidth = 1,
+                 color = 'black',) +
+  scale_x_continuous(breaks = 0:12) + 
+  labs(x = 'jumlah bayi yang lahir',
+       y = 'Peluang',
+       title = 'kelahiran bayi pada 365 hari ')
+```
+
+maka akan didapat histogram seperti gambar dibawah
+
+![1d](https://github.com/bosbonta/P1_Probstat_F_5025201182/blob/main/screenshoot/pic.3.png)
+
+Setelah data acak yang didapat, untuk mengetahui jumlah probabilitas pada satu hari terdapat 6 bayi lahir adalah dengan menggunakan “mean”
+``` R
+#3b
+mean(babies==6)
+```
+maka akan didapatkan probabilitas suatu hari terdapat 6 bayi lahir adalah sebesar 0.1232877
+
+-**bandingkan hasil a dan b**
+
+dapat dilihat perbedaan dari hasil perhitungan rumus dan hasil perhitungan yang didapat dari 365 data random
+| A       | B        |
+|---------|----------|
+|0.1281201| 0.1232877|
+
+Perbedaan dari hasil perhitungan data tersebut tidak signifikan, dengan persentase perbedaan hanya 3.771%≈4%. Ini menandakan hasil perhitungan sebenarnya pada suatu data random nilainya akan mendekati dengan rumus peluang distribusi poissonnya. Dengan syarat probabilitas berhasil sama.
+
+-**rata-rata dan varian**
+
+Karena pada soal sudah diberitahu lambdanya, dan nilai lambda tersebut merupakan rata-rata maka untuk lambdanya adalah 4.5. sedangkan untuk varian juga merupakan nilai lambda untuk distribusi poisson, oleh karena itu nilainya juga 4.5
