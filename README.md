@@ -228,4 +228,42 @@ maka untuk nilai rata-ratanya adalah sbesar 10 dan untuk variannya adalah sebesa
 
 -**Fungsi Probabilitas dari Distribusi Exponensial**
 
+```R
+#5a
+lambda=3
+set.seed(1)
+rexp(lambda)
+```
+akan didapat 3 nilai berupa 0.1397953 0.4360686 2.8949685
+
+-**Histogram dari Distribusi Exponensial untuk 10, 100, 1000 dan 10000 bilangan random**
+
+untuk 10 data random 
+```R
+#5b
+set.seed(1)
+hist(rexp(10))
+```
+![5a](https://github.com/bosbonta/P1_Probstat_F_5025201182/blob/main/screenshoot/pic.5a.png)
+untuk 100 data random 
+```R
+#5b
+set.seed(1)
+hist(rexp(100))
+```
+![5b](https://github.com/bosbonta/P1_Probstat_F_5025201182/blob/main/screenshoot/pic.5b.png)
+untuk 1000 data random 
+```R
+#5b
+set.seed(1)
+hist(rexp(1000))
+```
+![5c](https://github.com/bosbonta/P1_Probstat_F_5025201182/blob/main/screenshoot/pic.5c.png)
+untuk 10000 data random 
+```R
+#5b
+set.seed(1)
+hist(rexp(10000))
+```
+![5d](https://github.com/bosbonta/P1_Probstat_F_5025201182/blob/main/screenshoot/pic.5d.png)
 
