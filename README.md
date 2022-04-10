@@ -245,6 +245,7 @@ set.seed(1)
 hist(rexp(10))
 ```
 ![5a](https://github.com/bosbonta/P1_Probstat_F_5025201182/blob/main/screenshoot/pic.5a.png)
+
 untuk 100 data random 
 ```R
 #5b
@@ -252,6 +253,7 @@ set.seed(1)
 hist(rexp(100))
 ```
 ![5b](https://github.com/bosbonta/P1_Probstat_F_5025201182/blob/main/screenshoot/pic.5b.png)
+
 untuk 1000 data random 
 ```R
 #5b
@@ -259,11 +261,14 @@ set.seed(1)
 hist(rexp(1000))
 ```
 ![5c](https://github.com/bosbonta/P1_Probstat_F_5025201182/blob/main/screenshoot/pic.5c.png)
+
 untuk 10000 data random 
 ```R
 #5b
 set.seed(1)
 hist(rexp(10000))
 ```
+
 ![5d](https://github.com/bosbonta/P1_Probstat_F_5025201182/blob/main/screenshoot/pic.5d.png)
+
 
