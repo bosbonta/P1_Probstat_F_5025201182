@@ -181,8 +181,41 @@ dapat dilihat perbedaan dari hasil perhitungan rumus dan hasil perhitungan yang 
 |---------|----------|
 |0.1281201| 0.1232877|
 
-Perbedaan dari hasil perhitungan data tersebut tidak signifikan, dengan persentase perbedaan hanya 3.771%≈4%. Ini menandakan hasil perhitungan sebenarnya pada suatu data random nilainya akan mendekati dengan rumus peluang distribusi poissonnya. Dengan syarat probabilitas berhasil sama.
+Perbedaan dari hasil perhitungan data tersebut tidak signifikan, dengan persentase perbedaan hanya 3.771%≈4%. Ini menandakan hasil perhitungan sebenarnya pada suatu data random nilainya akan mendekati dengan rumus peluang distribusi poissonnya. 
 
 -**rata-rata dan varian**
 
 Karena pada soal sudah diberitahu lambdanya, dan nilai lambda tersebut merupakan rata-rata maka untuk lambdanya adalah 4.5. sedangkan untuk varian juga merupakan nilai lambda untuk distribusi poisson, oleh karena itu nilainya juga 4.5
+
+## Soal 4
+>Diketahui nilai x = 2 dan v = 10
+
+-**Fungsi probabilitas dari fungsi chi-square dengan x=2 dan v=10**
+untuk mengetahui fungsi probabilitasnya dapat menggunakan “dchisq”
+
+``` R
+#4a
+dchisq(2, 10)
+```
+
+-**Histogram dari Distribusi Chi-Square dengan 100 data random.**
+
+data randomnya didapat dengan random menggunakan “rchisq” lalu untuk syntax histogramnya seperti dibawah
+``` R
+#4b
+chiSquare <- data.frame('data4' = rchisq(100, 10))
+chiSquare %>% ggplot() +
+  geom_histogram(aes(x = data4,
+                     y = stat(count / sum(count)),
+                     fill = data4 == 2),
+                 binwidth = 1,
+                 color = 'black',) +
+  scale_x_continuous(breaks = 0:20) + 
+  labs(x = 'x',
+       y = 'Peluang',
+       title = 'Distribusi Chi-Square dengan 100 data random')
+ ```
+ 
+ maka akan didapat histogram seperti gambar dibawah
+
+![1d](https://github.com/bosbonta/P1_Probstat_F_5025201182/blob/main/screenshoot/pic.4.png)
