@@ -319,7 +319,8 @@ hist(data6, breaks = 50, main="5025201182_Amsal Herbert_F_DNhistogram")
 ```
 
 -**Nilai Varian dari hasil generate**
-diapatkan dengan mempangkatkan nilai sd
+
+diapatkan dengan mengkuadratkan nilai sd
 ```
 #6c
 varian6 = sd * sd
