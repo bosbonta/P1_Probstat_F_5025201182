@@ -221,7 +221,7 @@ v=10
 rata=v
 vari=2*v
 ```
-maka untuk nilai rata-ratanya adalah sbesar 10 dan untuk variannya adalah sebesar 20
+maka untuk nilai rata-ratanya adalah sebesar 10 dan untuk variannya adalah sebesar 20
 
 ## Soal 5
 >Diketahui bilangan acak (random variable) berdistribusi exponential (λ = 3)
@@ -271,4 +271,15 @@ hist(rexp(10000))
 
 ![5d](https://github.com/bosbonta/P1_Probstat_F_5025201182/blob/main/screenshoot/pic.5d.png)
 
+-**Rata-rata dan variasi Distribusi Exponensial untuk n = 100 dan λ = 3**
+
+dalam pembuktian rumus yang ada pada link ini https://jagostat.com/teori-peluang/rataan-dan-varians-distribusi-eksponensial
+didapatkan bahwa 
+```
+#5c
+rataan = lambda
+varian = lambda * lambda
+```
+
+maka untuk nilai rata-ratanya adalah sebesar 3 dan untuk variannya adalah sebesar 9
 
