@@ -283,3 +283,48 @@ varian = lambda * lambda
 
 maka untuk nilai rata-ratanya adalah sebesar 3 dan untuk variannya adalah sebesar 9
 
+## Soal 6
+>Diketahui generate random nilai sebanyak 100 data, mean = 50, sd = 8
+
+-**Fungsi Probabilitas dari Distribusi Normal P(X1 ≤ x ≤ X2), hitung Z-Score Nya dan plot
+data generate randomnya dalam bentuk grafik.**
+
+terdapat 100 data acak 
+
+```
+#6a
+rnorm(100, mean = 50, sd = 8)->data6
+```
+
+![6a](https://github.com/bosbonta/P1_Probstat_F_5025201182/blob/main/screenshoot/pic.6a.png)
+
+lalu plot dalam bentuk grafik, untuk sebelah kiri mean adalah daerah x1 dan sebelah kanan mean adalah x2
+
+```
+#6a
+data6
+abline(v=mean(data6),col="black")
+plot(data6)
+```
+![6a](https://github.com/bosbonta/P1_Probstat_F_5025201182/blob/main/screenshoot/pic.6b.png)
+
+
+-**Generate Histogram dari Distribusi Normal dengan breaks 50 dan format penamaan:
+NRP_Nama_Probstat_{Nama Kelas}_DNhistogram**
+
+lalu akan di generate ke bentuk histogram 
+```
+#6b
+hist(data6, breaks = 50, main="5025201182_Amsal Herbert_F_DNhistogram")
+```
+
+-**Nilai Varian dari hasil generate**
+diapatkan dengan mempangkatkan nilai sd
+```
+#6c
+varian6 = sd * sd
+```
+
+maka didapatkan nilai varian sebesar 64
+
+
