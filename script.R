@@ -72,15 +72,41 @@ var(babies)
 ?dchisq
 dchisq(2, 10)
 
+chiSquare = rchisq(100, v)
+hist(chiSquare) 
 
-chiSquare <- data.frame('data4' = rchisq(100, 10))
-chiSquare %>% ggplot() +
-  geom_histogram(aes(x = data4,
-                     y = stat(count / sum(count)),
-                     fill = data4 == 2),
-                 binwidth = 1,
-                 color = 'black',) +
-  scale_x_continuous(breaks = 0:20) + 
-  labs(x = 'jumlah bayi yang lahir',
-       y = 'Peluang',
-       title = 'kelahiran bayi pada 365 hari ')
+v=10
+rata=v
+vari=2*v
+
+#5
+?rexp
+
+lambda = 3
+rexp(lambda)
+
+set.seed(1)
+hist(rexp(10))
+set.seed(1)
+hist(rexp(100))
+set.seed(1)
+hist(rexp(1000))
+set.seed(1)
+hist(rexp(10000))
+
+rataan = lambda
+varian = lambda * lambda
+
+#6
+?dnorm
+
+rnorm(100, mean = 50, sd = 8)->data6
+data6
+abline(v=mean(data6),col="black")
+plot(data6)
+
+hist(data6, breaks = 50, main="5025201182_Amsal Herbert_F_DNhistogram")
+
+sd=8
+varian6=sd*sd
+
