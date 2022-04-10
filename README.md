@@ -185,8 +185,7 @@ Perbedaan dari hasil perhitungan data tersebut tidak signifikan, dengan persenta
 
 -**rata-rata dan varian**
 
-Karena pada soal sudah diberitahu lambdanya, dan nilai lambda tersebut merupakan rata-rata maka untuk lambdanya adalah 4.5. sedangkan untuk varian juga merupakan nilai lambda untuk distribusi poisson, sesuai yang ada di penurunan rumus pada https://www.rumusstatistik.com/2012/07/rumus-distribusi-poisson.html
-oleh karena itu nilainya juga 4.5
+Karena pada soal sudah diberitahu lambdanya, dan nilai lambda tersebut merupakan rata-rata maka untuk lambdanya adalah 4.5. sedangkan untuk varian juga merupakan nilai lambda untuk distribusi poisson, oleh karena itu nilainya juga 4.5
 
 ## Soal 4
 >Diketahui nilai x = 2 dan v = 10
