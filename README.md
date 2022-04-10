@@ -218,7 +218,7 @@ chiSquare %>% ggplot() +
  
  maka akan didapat histogram seperti gambar dibawah
 
-![1d](https://github.com/bosbonta/P1_Probstat_F_5025201182/blob/main/screenshoot/pic.4.png)
+![1d](https://github.com/bosbonta/P1_Probstat_F_5025201182/blob/main/screenshoot/pic.4a.png)
 
 -**Nilai rata-rata dan variasi**
 dalam pembuktian rumus yang ada pada link ini https://jagostat.com/teori-peluang/rataan-dan-varians-distribusi-chi-square
