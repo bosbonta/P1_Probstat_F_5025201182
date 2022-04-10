@@ -41,6 +41,8 @@ Pada hasil a dan b, didapat penyurvei bertemu x = 3 orang yang tidak menghadiri 
 |-------|-------|
 | 0.1024| 0.1017|
 
+Perbedaan dari hasil perhitungan data tersebut tidak signifikan, dengan persentase perbedaan hanya 0.6835%≈0.7%. Ini menandakan hasil perhitungan sebenarnya pada suatu data random nilainya akan mendekati dengan rumus peluang distribusi geometrik. Dengan syarat probabilitas berhasil sama.
+
 - **Histogram distribusi geometrik, peluang X=3**
 
 Untuk menampilkan histogram bisa menggunakan syntax dibawah, untuk dapat menjalankan syntax ini harus menginstall library (dplyr) dan (ggplot2) terlebih dulu
