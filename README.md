@@ -24,7 +24,7 @@ rgeom(n=10000,p=0.2)
 ```
 dapat dilihat untuk 1000 data pertamanya
 
-![1d](https://github.com/bosbonta/P1_Probstat_F_5025201182/blob/main/screenshoot/pic.1a.png)
+![1b](https://github.com/bosbonta/P1_Probstat_F_5025201182/blob/main/screenshoot/pic.1a.png)
 
 isi data yang bisa ditampilkan hanya sampai 1000
 
@@ -114,7 +114,7 @@ data.frame(x = 0:10, prob = dbinom(x = 0:10, 20,prob = .2)) %>%
 
 Bisa dilihat pada histogram di bawah bahwa, untuk probabilitas 4 pasien sembuh ada di 0.22
 
-![1d](https://github.com/bosbonta/P1_Probstat_F_5025201182/blob/main/screenshoot/pic.2a.png)
+![2b](https://github.com/bosbonta/P1_Probstat_F_5025201182/blob/main/screenshoot/pic.2a.png)
 
 -**Nilai rata-rata dan varians distribusi binomial**
 
@@ -165,7 +165,7 @@ babies %>% ggplot() +
 
 maka akan didapat histogram seperti gambar dibawah
 
-![1d](https://github.com/bosbonta/P1_Probstat_F_5025201182/blob/main/screenshoot/pic.3.png)
+![3b](https://github.com/bosbonta/P1_Probstat_F_5025201182/blob/main/screenshoot/pic.3.png)
 
 Setelah data acak yang didapat, untuk mengetahui jumlah probabilitas pada satu hari terdapat 6 bayi lahir adalah dengan menggunakan “mean”
 ``` R
@@ -218,9 +218,10 @@ chiSquare %>% ggplot() +
  
  maka akan didapat histogram seperti gambar dibawah
 
-![1d](https://github.com/bosbonta/P1_Probstat_F_5025201182/blob/main/screenshoot/pic.4a.png)
+![4b](https://github.com/bosbonta/P1_Probstat_F_5025201182/blob/main/screenshoot/pic.4.png)
 
 -**Nilai rata-rata dan variasi**
+
 dalam pembuktian rumus yang ada pada link ini https://jagostat.com/teori-peluang/rataan-dan-varians-distribusi-chi-square
 didapatkan bahwa 
 ```R
