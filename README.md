@@ -203,22 +203,13 @@ dchisq(2, 10)
 data randomnya didapat dengan random menggunakan “rchisq” lalu untuk syntax histogramnya seperti dibawah
 ``` R
 #4b
-chiSquare <- data.frame('data4' = rchisq(100, 10))
-chiSquare %>% ggplot() +
-  geom_histogram(aes(x = data4,
-                     y = stat(count / sum(count)),
-                     fill = data4 == 2),
-                 binwidth = 1,
-                 color = 'black',) +
-  scale_x_continuous(breaks = 0:20) + 
-  labs(x = 'x',
-       y = 'Peluang',
-       title = 'Distribusi Chi-Square dengan 100 data random')
+chiSquare = rchisq(100, v)
+hist(chiSquare) 
  ```
  
  maka akan didapat histogram seperti gambar dibawah
 
-![4b](https://github.com/bosbonta/P1_Probstat_F_5025201182/blob/main/screenshoot/pic.4a.png)
+![4b](https://github.com/bosbonta/P1_Probstat_F_5025201182/blob/main/screenshoot/pic.4b.png)
 
 -**Nilai rata-rata dan variasi**
 
@@ -231,3 +222,10 @@ rata=v
 vari=2*v
 ```
 maka untuk nilai rata-ratanya adalah sbesar 10 dan untuk variannya adalah sebesar 20
+
+## Soal 5
+>Diketahui bilangan acak (random variable) berdistribusi exponential (λ = 3)
+
+-**Fungsi Probabilitas dari Distribusi Exponensial**
+
+
